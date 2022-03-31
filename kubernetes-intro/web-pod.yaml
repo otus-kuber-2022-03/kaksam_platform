@@ -4,8 +4,6 @@ metadata:
   name: web
   labels:
     app: web
-  namespace: hw1
-
 spec:
   volumes:
   - name: app
