@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: server
-        image: horror894/controllers-hipster-shop-paymentservice:v0.0.2
+        image: kaksam/homework-paymantservice:v0.0.2
         ports:
         - containerPort: 50051
         env:
