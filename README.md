@@ -15,3 +15,18 @@ kaksam Platform repository
 4. applyed frontend-pod.yaml with error status.
 5. added env-variables to frontend-pod-health.yaml to fix the issue
 </details>
+
+<details>
+<summary> <b>HW02 Kubernetes-controllers</b> </summary>
+
+**Why changes of version in replica set doesn't apply new version for pod:
+ - ReplicaSet doesn't check changes of images
+
+1. Created and pushed kaksam/paymentservice:v0.0.1 and v0.0.2
+2. frontend-replicaset.yaml and frontend-deployment.yaml prepared 
+3. paymentservice-replicaset.yaml paymentservice-deployment.yaml prepared 
+4. paymentservice-deployment-bg.yaml for BlueGreen deployment using `maxSugre` and `maxUnavailable`
+5. paymentservice-deployment-reverse.yaml for reverse deployment using `maxSugre` and `maxUnavailable`
+6. Added `readinessProbe` for paymentservice-deployment.yaml
+7. nodeexporter-daemonset.yaml using toleration for master node usage
+</details>
