@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: server
-        image: kaksam/homework-frontend:1.0
+        image: horror894/intro-hipster-shop-frontend:v0.0.1
         readinessProbe:
           initialDelaySeconds: 10
           httpGet:
