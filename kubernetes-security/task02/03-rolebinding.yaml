@@ -1,5 +1,5 @@
 apiVersion: rbac.authorization.k8s.io/v1
-kind: Role
+kind: ClusterRole
 metadata:
   creationTimestamp: "2022-04-06T18:04:10Z"
   name: pod-reader
@@ -18,7 +18,7 @@ rules:
 
 # kubectl create role pod-reader --verb=get,list,watch --resource=pods --namespace=prometheus -o yaml > 03-rolebinding.yamlapiVersion: rbac.authorization.k8s.io/v1
 ---
-kind: RoleBinding
+kind: ClusterRoleBinding
 metadata:
   creationTimestamp: "2022-04-06T18:05:35Z"
   name: carol-pod
