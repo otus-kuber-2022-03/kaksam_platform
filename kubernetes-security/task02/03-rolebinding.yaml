@@ -2,11 +2,10 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  creationTimestamp: "2022-04-06T18:04:10Z"
+  creationTimestamp: "2022-04-06T18:19:52Z"
   name: pod-reader
-  namespace: prometheus
-  resourceVersion: "2509636"
-  uid: 7ac5c2d9-194d-4cd3-a1b0-666fea896787
+  resourceVersion: "2513675"
+  uid: 81c5fc62-67e7-44e7-9011-aa4062d4aef6
 rules:
 - apiGroups:
   - ""
@@ -17,23 +16,24 @@ rules:
   - list
   - watch
 
+
 # kubectl create clusterrole pod-reader --verb=get,list,watch --resource=pods --namespace=prometheus -o yaml > 03-rolebinding.yaml
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  creationTimestamp: "2022-04-06T18:05:35Z"
+  creationTimestamp: "2022-04-06T18:20:02Z"
   name: carol-pod
-  namespace: default
-  resourceVersion: "2509974"
-  uid: 4bc3c906-4b21-4319-b183-1a6bedf69bff
+  resourceVersion: "2513770"
+  uid: cfcb06a5-a9c2-4cd0-a4c7-cedf48f8b86c
 roleRef:
   apiGroup: rbac.authorization.k8s.io
-  kind: Role
+  kind: ClusterRole
   name: pod-reader
 subjects:
 - kind: ServiceAccount
   name: carol
   namespace: prometheus
+
 
 # kubectl create clusterrolebinding carol-pod --clusterrole=pod-reader --serviceaccount=prometheus:carol -o yaml >> 03-rolebinding.yaml
