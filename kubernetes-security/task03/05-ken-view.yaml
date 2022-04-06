@@ -14,3 +14,5 @@ subjects:
 - kind: ServiceAccount
   name: ken
   namespace: dev
+
+# kubectl create rolebinding ken-view --clusterrole=view --namespace=dev --serviceaccount=dev:ken -o yaml > 05-ken-view.yaml
