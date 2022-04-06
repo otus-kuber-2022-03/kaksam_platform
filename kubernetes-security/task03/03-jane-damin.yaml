@@ -1,0 +1,16 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  creationTimestamp: "2022-04-06T18:47:35Z"
+  name: jane-admin
+  namespace: dev
+  resourceVersion: "2520917"
+  uid: 1ef8cc24-f2d9-4b94-895e-d25726d3653c
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: admin
+subjects:
+- kind: ServiceAccount
+  name: jane
+  namespace: dev

@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  creationTimestamp: "2022-04-06T17:54:34Z"
+  creationTimestamp: "2022-04-06T18:49:27Z"
   labels:
     kubernetes.io/metadata.name: prometheus
   name: prometheus
-  resourceVersion: "2507107"
-  uid: a3db9d3f-2996-4fcf-87f1-c211fb54520d
+  resourceVersion: "2521437"
+  uid: f771dd31-916e-46ab-a869-a931742cb49a
 spec:
   finalizers:
   - kubernetes
