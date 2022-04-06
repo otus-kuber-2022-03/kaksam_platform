@@ -6,4 +6,5 @@ metadata:
   namespace: dev
   resourceVersion: "2514853"
   uid: 88a38423-f1a7-42f8-a951-b819b6699e1a
+
 # kubectl create sa jane --namespace=dev -o yaml > 02-jane.yaml

@@ -6,3 +6,5 @@ metadata:
   namespace: dev
   resourceVersion: "2515686"
   uid: a72048ca-e647-4864-8a4a-75199fabe056
+
+# kubectl create sa ken --namespace=dev -o yaml > 04-ken.yaml
