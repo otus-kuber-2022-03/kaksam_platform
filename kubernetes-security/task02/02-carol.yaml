@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  creationTimestamp: "2022-04-06T17:56:31Z"
+  name: carol
+  namespace: prometheus
+  resourceVersion: "2507619"
+  uid: 590ceabe-e68c-4980-874c-2f2702bc3088
+# kubectl create sa carol --namespace=prometheus -o yaml > 02-carol.yaml

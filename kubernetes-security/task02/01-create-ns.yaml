@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: "2022-04-06T17:54:34Z"
+  labels:
+    kubernetes.io/metadata.name: prometheus
+  name: prometheus
+  resourceVersion: "2507107"
+  uid: a3db9d3f-2996-4fcf-87f1-c211fb54520d
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active
+
+# kubectl create ns prometheus -o yaml > 01-create-ns.yaml
