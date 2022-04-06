@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  creationTimestamp: "2022-04-06T17:49:33Z"
+  name: dave
+  namespace: default
+  resourceVersion: "2505792"
+  uid: c26d9d25-c6cf-4977-a8ba-cbaebdc6d426
+# kubectl create sa dave -o yaml > 03-sa-dave.yaml
