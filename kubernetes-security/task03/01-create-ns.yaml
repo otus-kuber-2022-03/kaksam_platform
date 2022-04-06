@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: "2022-04-06T18:23:35Z"
+  labels:
+    kubernetes.io/metadata.name: dev
+  name: dev
+  resourceVersion: "2514660"
+  uid: 8cdd51f4-206b-49d3-9d34-07fce9144a0e
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active
+
+# kubectl create ns dev -o yaml > 01-create-ns.yaml
