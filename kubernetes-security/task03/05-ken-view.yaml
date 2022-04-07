@@ -1,0 +1,18 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  creationTimestamp: "2022-04-06T19:34:01Z"
+  name: ken-view
+  namespace: dev
+  resourceVersion: "2533096"
+  uid: 79d6044a-1970-4b97-aacf-cace546219cb
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: view
+subjects:
+- kind: ServiceAccount
+  name: ken
+  namespace: dev
+
+# kubectl create rolebinding ken-view --clusterrole=view --namespace=dev --serviceaccount=dev:ken -o yaml > 05-ken-view.yaml

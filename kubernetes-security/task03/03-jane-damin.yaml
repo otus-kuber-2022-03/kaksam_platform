@@ -1,0 +1,19 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  creationTimestamp: "2022-04-06T19:31:40Z"
+  name: jane-admin
+  namespace: dev
+  resourceVersion: "2532452"
+  uid: 925bf33b-3212-49c8-aeaf-a3802f07dbc3
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: admin
+subjects:
+- kind: ServiceAccount
+  name: jane
+  namespace: dev
+
+
+# kubectl create rolebinding jane-admin --clusterrole=admin --namespace=dev --serviceaccount=dev:jane -o yaml > 03-jane-damin.yaml
