@@ -59,3 +59,12 @@ Used kubctl cli for generate manifests
 # kubectl create rolebinding ken-view --clusterrole=view --namespace=dev --serviceaccount=dev:ken -o yaml > 05-ken-view.yaml
 ```
 </details>
+<details>
+<summary> <b>HW04 Kubernetes-networks</b> </summary>
+
+I don`t have an ability to check each task which should use routing into cluster, because hyperkit doesn't work on M1
+as result more part of HW I got from another student from previous course...
+
+I hope realize how it works, probably ill turn back to this HW when another driver appears for M1
+
+</details>
