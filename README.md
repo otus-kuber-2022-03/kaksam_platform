@@ -68,3 +68,10 @@ as result more part of HW I got from another student from previous course...
 I hope realize how it works, probably ill turn back to this HW when another driver appears for M1
 
 </details>
+<details>
+<summary> <b>HW05 Kubernetes-volumes</b> </summary>
+
+1. StatefulSet MinIO deployed 
+2. Headless Service Deployed
+3. Secret configured with "type: kubernetes.io/basic-auth", deploy was changed to ref to created secret. 
+</details>
