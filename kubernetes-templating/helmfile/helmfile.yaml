@@ -6,7 +6,6 @@ repositories:
 - name: harbor
   url: https://helm.goharbor.io
 
-
 releases:
 - name: nginx-ingress
   namespace: nginx-ingress
@@ -22,7 +21,6 @@ releases:
   version: 1.8.0
   values:
     - installCRDs: true
-    - ../cert-manager/issuer.yaml
 
 - name: chartmuseum
   needs:
@@ -32,6 +30,7 @@ releases:
   version: 2.13.2
   values:
     - ../chartmuseum/values.yaml
+#    - ./issuer.yaml
 
 - name: harbor
   needs:
