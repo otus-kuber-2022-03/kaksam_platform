@@ -9,6 +9,7 @@ repositories:
 releases:
 - name: nginx-ingress
   namespace: nginx-ingress
+  createNamespace: true
   chart: stable/nginx-ingress
   version: 1.41.3
   wait: true
@@ -26,6 +27,7 @@ releases:
   needs:
     - cert-manager/cert-manager
   namespace: chartmuseum
+  createNamespace: true
   chart: stable/chartmuseum
   version: 2.13.2
   values:
@@ -36,11 +38,11 @@ releases:
   needs:
     - cert-manager/cert-manager
   namespace: harbor
+  createNamespace: true
   chart: harbor/harbor
   version: 1.9.0
   values:
     - ../harbor/values.yaml
 
-apiVersions:
-- v1
-- v2
+- name: clusterissuer
+  chart: ./charts/clusterissuer
