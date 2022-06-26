@@ -270,10 +270,10 @@ ingress:
 ## Must be provided if Ingress is enabled
 ##
   hosts:
-    - name: chartmuseum.3.124.150.44.nip.io
+    - name: chartmuseum.18.156.140.137.nip.io
       path: /
       tls: true
-      tlsSecret: chartmuseum.3.124.150.44.nip.io
+      tlsSecret: chartmuseum.18.156.140.137.nip.io
 
 #    - name: chartmuseum.domain2.com
 #      path: /
