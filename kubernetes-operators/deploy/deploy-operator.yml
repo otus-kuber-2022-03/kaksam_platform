@@ -15,5 +15,5 @@ spec:
       serviceAccountName: mysql-operator
       containers:
         - name: operator
-          image: "kaksam/hw7:0.1"
+          image: "kaksam/mysql-operator:lin"
           imagePullPolicy: "Always"
