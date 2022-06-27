@@ -75,3 +75,19 @@ I hope realize how it works, probably ill turn back to this HW when another driv
 2. Headless Service Deployed
 3. Secret configured with "type: kubernetes.io/basic-auth", deploy was changed to ref to created secret. 
 </details>
+
+<details>
+<summary> <b>HW06 Kubernetes-templates</b> </summary>
+
+1. nginx-ingress installed
+2. cert-manager installed + acme cluster issuesr
+3. cartmuseum installed
+4. harbor installed
+5. created helmfile for templated steps above 
+6. created helm chart hipster-shop
+7. created values for frontend helm chart
+8. redis + frontend moved to dependence for hipster-shop
+9. skipped task with helm secret
+10. created templates with kubecfg
+11. created templates with kustomize
+</details>

@@ -1,0 +1,52 @@
+repositories:
+- name: stable
+  url: https://charts.helm.sh/stable
+- name: jetstack
+  url: https://charts.jetstack.io
+- name: harbor
+  url: https://helm.goharbor.io
+- name: nginx-stable
+  url: https://helm.nginx.com/stable
+
+releases:
+- name: nginx-ingress
+  createNamespace: true
+  namespace: nginx-ingress
+  chart: stable/nginx-ingress
+  version: 1.41.3
+
+- name: cert-manager
+  needs:
+    - nginx-ingress/nginx-ingress
+  namespace: cert-manager
+  createNamespace: true
+  chart: jetstack/cert-manager
+  version: 0.16.1
+  values:
+    - installCRDs: true
+
+- name: chartmuseum
+  needs:
+    - cert-manager/cert-manager
+    - harbor/harbor
+  namespace: chartmuseum
+  createNamespace: true
+  chart: stable/chartmuseum
+  version: 2.13.2
+  values:
+    - ../chartmuseum/values.yaml
+
+- name: harbor
+  needs:
+    - cert-manager/cert-manager
+  namespace: harbor
+  createNamespace: true
+  chart: harbor/harbor
+  version: 1.9.0
+  values:
+    - ../harbor/values.yaml
+
+- name: clusterissuer
+  needs:
+    - cert-manager/cert-manager
+  chart: ./cert-manager/
