@@ -91,3 +91,25 @@ I hope realize how it works, probably ill turn back to this HW when another driv
 10. created templates with kubecfg
 11. created templates with kustomize
 </details>
+
+<details>
+<summary> <b>HW07 Kubernetes-operators</b> </summary>
+
+```
+ubuntu@ip-172-31-43-122:~/kaksam_platform/kubernetes-operators/deploy$ kubectl get jobs
+NAME                         COMPLETIONS   DURATION   AGE
+backup-mysql-instance-job    1/1           2s         2m55s
+restore-mysql-instance-job   1/1           18s        2m26s
+
+ubuntu@ip-172-31-43-122:~/kaksam_platform/kubernetes-operators/deploy$ kubectl exec -it $MYSQLPOD -- mysql -potuspassword -e "select * from test;" otus-database
+mysql: [Warning] Using a password on the command line interface can be insecure.
++----+-------------+
+| id | name        |
++----+-------------+
+|  1 | some data   |
+|  2 | some data   |
+|  3 | some data-2 |
++----+-------------+
+
+```
+</details>
